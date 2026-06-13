@@ -1,0 +1,53 @@
+@use "@/styles/abstracts/fonts" as *;
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/mixins" as *;
+
+.aboutSection{
+    padding: 42px $container-padding;
+    @include mobile-xs{
+                padding: 42px 20px;
+            }
+    .aboutHeader{
+        @include flex(row, space-between, flex-end);
+        margin-bottom: 40px;
+        h2{
+            font-family: TT_Firs_Neue_Medium;
+            font-size: 90px;
+            color: $primary-black;
+            white-space: pre-line;
+            @include mobile-xs{
+                font-size: $fs-md;
+            }
+
+        }
+        
+        .link{
+    padding-bottom: 30px;
+    a{
+            font-family: TT_Hoves_Medium;
+            font-size: $fs-2xl;
+            padding-bottom: 5px;
+            color: $primary-black;
+            border-bottom: 2px solid $primary-black;
+            @include mobile-xs{
+                display: none;
+            }
+
+        }
+}
+        
+    }
+    .aboutDescription{
+                    font-family: TT_Hoves_Regular;
+                    font-size: 30px;
+                    color: $primary-black;
+                    white-space: pre-line;
+                    @include mobile-xs{
+                font-size: 20px;
+            }
+
+    }
+    .aboutSlider{
+        margin: 50px 0;
+    }
+}

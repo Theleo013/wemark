@@ -1,0 +1,201 @@
+@use "@/styles/abstracts/fonts" as *;
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/mixins" as *;
+
+.footer {
+    padding: 50px 60px 30px;
+
+    @include mobile-xs {
+        padding: 40px 20px 20px;
+    }
+    @include desktop {
+        padding: 40px 20px 20px;
+    }
+
+    background-color: $primary-black;
+
+    .footerContent {
+@include flex(row, space-evenly, start);
+
+        @include mobile-xs {
+            flex-wrap: wrap;
+
+            .footerColumn {
+
+                &:nth-child(1),
+                &:nth-child(2) {
+                    width: 50%;
+                }
+
+                &:nth-child(3),
+                &:nth-child(4) {
+                    width: 100%;
+                    margin-top: 30px;
+                }
+                
+            }
+        }
+
+        .footerColumn {
+            @include flex(column, center, start, 20px);
+
+            span {
+                font-family: TT_Hoves_Medium;
+                font-size: 30px;
+                color: $primary-gray;
+
+                @include mobile-xs {
+                    font-size: 20px;
+                }
+                @include desktop {
+                    font-size: 20px;
+                }
+            }
+
+            ul {
+                li {
+                    font-family: TT_Hoves_Medium;
+                    font-size: 24px;
+                    color: $primary-gray;
+                    opacity: 50%;
+                    list-style: none;
+
+                    @include mobile-xs {
+                        font-size: 16px;
+                    }
+                    @include desktop {
+                        font-size: 16px;
+                    }
+                }
+            }
+
+            .partershipWrapper {
+                @include flex(column, center, start, 20px);
+                padding-right: 100px;
+            }
+        }
+
+        .languageMobile {
+            display: none;
+            opacity: 50%;
+            color: $primary-gray;
+            font-family: TT_Hoves_Regular;
+            font-size: $fs-md;
+            text-transform: uppercase;
+margin-top: 50px;
+            @include mobile-xs {
+                @include flex(row, center, center, 10px);
+             
+            }
+            @include desktop {
+                display: none
+             
+            }
+           .switch{
+                @include flex(row, center, center, 10px);
+                .divide{
+                   border-left: 2px solid $primary-gray;
+                   height: 26px;
+                }
+            }
+            
+        }
+        .arrowUp{
+            img{
+                width: 75px;
+            height: 57px;
+            }
+            
+        }
+    }
+
+    .divider {
+        border-top: 2px solid $primary-gray;
+        opacity: 50%;
+        margin: 50px 0;
+    }
+
+    .footerLogo {
+        @include flex-center;
+        margin: 50px 0;
+
+        img {
+            width: 876px;
+            height: 139;
+            opacity: 40%;
+            @include mobile-xs{
+            width: 320px;
+            height: 51px;
+           }
+            @include desktop{
+            width: 320px;
+            height: 51px;
+           }
+        }
+    }
+
+    .bottomWrapper {
+        @include flex(row, space-between, center);
+
+        .bottomInfo {
+            @include flex(row, space-between, center, 20px);
+            font-family: TT_Hoves_Regular;
+            font-size: 16px;
+            color: $primary-gray;
+            text-transform: uppercase;
+            opacity: 50%;
+            button{
+                display: none;
+            }
+            @include mobile-xs{
+            font-size: $fs-sm;
+            a{
+                display: none;
+            }
+            button{
+                display: flex;
+                align-items: center;
+                background: none;
+                outline: none;
+                border: none;
+                color: $primary-gray;
+                font-family: TT_Hoves_Regular;
+                font-size: $fs-sm;
+                img{
+                    padding-left:5px; 
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+           }
+           @include desktop{
+            font-size: $fs-sm;
+            a{
+                display: flex;
+            }
+            button{
+                display: none;
+            }
+           }
+        }
+
+        .languageDesktop {
+            @include flex(row, center, center, 10px);
+            opacity: 50%;
+            color: $primary-gray;
+            font-family: TT_Hoves_Regular;
+            font-size: $fs-md;
+            text-transform: uppercase;
+
+
+            @include mobile-xs {
+                display: none;
+                font-size: $fs-sm;
+            }
+            @include desktop {
+                display: flex;
+                font-size: $fs-sm;
+            }
+        }
+    }
+}

@@ -1,0 +1,117 @@
+@use "@/styles/abstracts/fonts" as *;
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/mixins" as *;
+
+.founderSection {
+    margin-top: 250px;
+    padding: 100px 60px;
+
+    @include mobile-xs {
+            margin-top: 80px;
+        padding: 50px 20px;
+    }
+
+    @include desktop {
+        margin-top: 80px;
+        padding: 50px 20px;
+    }
+
+    .mainContent {
+        @include flex(row, space-between, start);
+
+        @include mobile-xs {
+            @include flex(column, center, center, 40px);
+        }
+
+        @include desktop {
+            @include flex(column, center, center, 40px);
+        }
+
+        .imageContainer {
+            position: relative; 
+            @include mobile-xs {
+                padding-top: 40px;
+            }
+            @include desktop {
+                padding-top: 40px;
+            }
+
+            .founderTitle {
+                position: absolute;
+                top: -200;
+                left: 0;
+                font-family: TT_Firs_Neue_Medium;
+                font-size: 90px;
+                color: $primary-black;
+                margin: 0;
+
+                @include mobile-xs {
+                    top: -20;
+                    font-size: $fs-2xl;
+                }
+            }
+
+            img {
+                width: clamp(280px, 90vw, 522px);
+                height: clamp(280px, 90vw, 522px);
+                object-fit: cover;
+                display: block;
+            }
+
+            .imageText {
+                @include flex(row, center, center, 2px);
+                font-family: Suisse_Intl_Medium;
+                font-size: 16px;
+                position: absolute;
+                bottom: 25px;
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: $primary-gray;
+                color: $primary-black;
+                border-radius: 6px;
+                padding: 10px;
+                width: max-content;
+                white-space: nowrap;
+
+                @include mobile-xs {
+                    font-size: 14px;
+                }
+
+                .position {
+                    color: $primary-black;
+                    opacity: 80%;
+                }
+            }
+        }
+
+        .textContainer {
+            padding: 0 25px;
+            @include flex(column, start, start, 16px);
+            color: $primary-black;
+
+            @include mobile-xs {
+                padding: 0;
+            }
+
+            span {
+                padding: 0 80px 0 0;
+                font-family: TT_Hoves_Medium;
+                font-size: 36px;
+                text-transform: uppercase;
+
+                @include mobile-xs {
+                    font-size: 20px;
+                }
+            }
+
+            p {
+                font-family: TT_Hoves_Medium;
+                font-size: 30px;
+
+                @include mobile-xs {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

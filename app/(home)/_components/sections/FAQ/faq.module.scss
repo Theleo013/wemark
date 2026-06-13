@@ -1,0 +1,62 @@
+@use "@/styles/abstracts/fonts" as *;
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/mixins" as *;
+
+.faqSection {
+    padding: 40px 60px;
+    @include mobile-xs{
+                padding: 40px 20px;
+            }
+    
+
+    h1 {
+        font-family: TT_Firs_Neue_Medium ;
+        font-size: $fs-5xl;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+        white-space: pre-line;
+        @include mobile-xs{
+                font-size: $fs-2xl;
+            }
+    }
+}
+
+.faqList {
+    display: flex;
+    flex-direction: column;
+}
+
+.faqItem {
+    border-top: 1px solid #ccc;
+    padding: 20px 0;
+
+    &:last-child {
+        border-bottom: 1px solid #ccc;
+    }
+}
+
+.faqQuestion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    h3 {
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    .icon {
+        font-size: $fs-2xl;
+        font-weight: 300;
+        color: $primary-black;
+        user-select: none;
+    }
+}
+
+.faqAnswer {
+    margin-top: 16px;
+    font-size: $fs-sm;
+    color: #555;
+    line-height: 1.6;
+}

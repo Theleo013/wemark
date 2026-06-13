@@ -1,0 +1,63 @@
+@use "@/styles/abstracts/fonts" as *;
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/mixins" as *;
+
+
+.navbar{
+    padding: 42px 60px;
+    @include flex(row, space-between, start);
+    @include mobile-xs{
+            padding: 14px 20px;
+
+    }
+    @include desktop{
+            padding: 22px 20px;
+
+    }
+    .logo{
+      img{
+        width: 122px;
+      height: 20px;
+      @include mobile-xs{
+        width: 102px;
+      height: 20px;
+      }
+      }  
+    }
+
+.navbarItems{
+    @include flex(row, space-between, center, 50px);
+    font-family: TT_Hoves_Medium;
+      font-size: $fs-2xl;
+      color: $primary-gray;
+      @include mobile-xs{
+        display: none;
+      }
+      @include desktop{
+      font-size: $fs-md;
+      gap: 20px;
+      }
+}
+.contact{
+    font-family: TT_Hoves_Medium;
+      font-size: $fs-2xl;
+      color: $primary-gray;
+      text-decoration: underline;
+      @include mobile-xs{
+        display: none;
+      }
+       @include desktop{
+      font-size: $fs-md;
+      }
+}
+.menuLabel{
+       font-family: TT_Hoves_Medium;
+    font-size: $fs-md;
+    color: $primary-gray;
+    display: none;
+    @include mobile-xs{
+        display: flex;
+     
+      }
+}
+}

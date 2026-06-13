@@ -1,0 +1,66 @@
+@use "@/styles/abstracts/fonts" as *;
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/mixins" as *;
+
+.programSection {
+    padding: 80px 60px;
+
+    @include mobile-xs {
+        padding: 0 20px;
+    }
+
+    .programTitle {
+        font-family: TT_Firs_Neue_Medium;
+        font-size: 90px;
+        color: $primary-black;
+        margin-bottom: 30px;
+
+        @include mobile-xs {
+            font-size: $fs-2xl;
+        }
+    }
+
+    .programDescription {
+        white-space: pre-line;
+
+        p {
+            font-family: TT_Hoves_Regular;
+            font-size: 30px;
+            color: $primary-black;
+
+            @include mobile-xs {
+                font-size: 20px;
+            }
+
+        }
+
+        strong {
+            font-family: TT_Hoves_Medium;
+            font-size: 36px;
+            color: $primary-black;
+
+            @include mobile-xs {
+                font-size: $fs-2xl;
+            }
+        }
+
+        ul {
+            list-style: disc;
+            padding-left: 4rem;
+
+            @include mobile-xs {
+                padding-left: 2rem;
+            }
+
+            li {
+                font-family: TT_Hoves_Regular;
+                font-size: 30px;
+                color: $primary-black;
+
+                @include mobile-xs {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

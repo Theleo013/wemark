@@ -1,0 +1,17 @@
+@use "@/styles/abstracts/fonts" as *;
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/mixins" as *;
+
+
+.slider{
+    position: relative;
+    width: 100%;
+    height: 486px;
+    @include mobile-xs{
+                height: 251px;
+            }
+    .images{
+        object-fit: cover;
+    }
+
+}

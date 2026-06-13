@@ -1,0 +1,32 @@
+@use "@/styles/abstracts/fonts" as *;
+@use "@/styles/abstracts/variables" as *;
+@use "@/styles/abstracts/mixins" as *;
+
+.marqueeSection {
+    margin: 50px 0;
+    padding: 1rem 0;
+
+    .Wrapper {
+        @include flex-center;
+
+        .item {
+            font-family: TT_Hoves_Medium;
+            font-size: 60px;
+            text-transform: uppercase;
+            @include mobile-xs{
+                font-size: $fs-4xl;
+            }
+        }
+        .star{
+            font-family: TT_Hoves_Regular;
+            padding: 0 40px;
+            font-size: 60px;
+            color: rgba(255, 60, 42, 1);
+            @include mobile-xs{
+                font-size: $fs-4xl;
+            }
+        }
+    }
+
+    
+}
