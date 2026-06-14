@@ -85,7 +85,7 @@
         }
 
         .textContainer {
-            padding: 0 0 0 115px;
+            padding: 0 0 0 20px;
             @include flex(column, start, start, 16px);
             color: $primary-black;
 

@@ -22,7 +22,7 @@ const MarqueeSection = ({ data }: MarqueSectionProps) => {
               {item}
             </span>
             <span className={MarqueeStyles.star}>
-              *
+              <img src="/svg/star.svg" alt="star" />
             </span>
           </div>
         ))}
@@ -36,7 +36,7 @@ const MarqueeSection = ({ data }: MarqueSectionProps) => {
               {item}
             </span>
             <span className={MarqueeStyles.star}>
-              *
+              <img src="/svg/star.svg" alt="star" />
             </span>
           </div>
         ))}
