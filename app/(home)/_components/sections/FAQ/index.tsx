@@ -18,7 +18,7 @@ const FAQSection = ({ data }: FAQSectionProps) => {
 
     return (
         <div className={FaqStyles.faqSection}>
-            <h1>{faq_title}</h1>
+            <span>{faq_title}</span>
 
             <div className={FaqStyles.faqList}>
                 {xschool_faq.map((faq, index) => (
@@ -27,10 +27,12 @@ const FAQSection = ({ data }: FAQSectionProps) => {
                         className={`${FaqStyles.faqItem} ${openIndex === index ? FaqStyles.open : ""}`}
                     >
                         <div className={FaqStyles.faqQuestion} onClick={() => toggle(index)}>
-                            <h3>{faq.question}</h3>
-                            <span className={FaqStyles.icon}>
-                                {openIndex === index ? "−" : "+"}
-                            </span>
+                            <span>{faq.question}</span>
+                            <img
+        src={openIndex === index ? "/svg/minus.svg" : "/svg/plus.svg"}
+        alt="icon"
+        className={FaqStyles.icons}
+    />
                         </div>
 
                         {openIndex === index && (

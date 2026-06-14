@@ -3,7 +3,7 @@
 @use "@/styles/abstracts/mixins" as *;
 
 .programSection {
-    padding: 80px 60px;
+    padding: 0 60px 260px;
 
     @include mobile-xs {
         padding: 0 20px;
@@ -12,25 +12,36 @@
     .programTitle {
         font-family: TT_Firs_Neue_Medium;
         font-size: 90px;
+        line-height: $lh-xl;
         color: $primary-black;
-        margin-bottom: 30px;
-
+        text-transform: uppercase;
         @include mobile-xs {
             font-size: $fs-2xl;
+            line-height: 28px;
+        }
+        @include desktop {
+            font-size: $fs-3xl;
+            line-height: $lh-md;
         }
     }
 
     .programDescription {
-        white-space: pre-line;
+        padding-top: 80px;
+        
 
         p {
             font-family: TT_Hoves_Regular;
             font-size: 30px;
-            color: $primary-black;
-
+            color: $secondary-black;
+            line-height: $lh-md;
             @include mobile-xs {
                 font-size: 20px;
+                line-height: 28px;
             }
+             @include desktop {
+            font-size: $fs-xl;
+            line-height: $lh-sm;
+        }
 
         }
 
@@ -38,10 +49,18 @@
             font-family: TT_Hoves_Medium;
             font-size: 36px;
             color: $primary-black;
+            line-height: $lh-lg;
+            text-transform: uppercase;
 
             @include mobile-xs {
                 font-size: $fs-2xl;
+                font-weight: 400;
             }
+             @include desktop {
+            font-size: $fs-2xl;
+            line-height: $lh-md;
+        }
+
         }
 
         ul {
@@ -55,11 +74,17 @@
             li {
                 font-family: TT_Hoves_Regular;
                 font-size: 30px;
-                color: $primary-black;
+                color: $secondary-black;
+                line-height: $lh-md;
 
                 @include mobile-xs {
                     font-size: 20px;
+                    line-height: 28px;
                 }
+                 @include desktop {
+            font-size: $fs-xl;
+            line-height: $lh-sm;
+        }
             }
         }
     }

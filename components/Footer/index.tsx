@@ -1,8 +1,26 @@
+"use client"
 import Link from "next/link"
 import footerStyles from "./footer.module.scss"
 
 
 const Footer = () => {
+
+  const scrollToTop = () => {
+    const start = window.scrollY;
+    const duration = 3000;
+    const startTime = performance.now();
+    const animateScroll = (currentTime: DOMHighResTimeStamp) => {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const ease = 1 - Math.pow(1 - progress, 3);
+      window.scrollTo(0, start * (1 - ease));
+      if (progress < 1) {
+        requestAnimationFrame(animateScroll);
+      }
+    };
+    requestAnimationFrame(animateScroll);
+  }
+
   return (
     <div className={`${footerStyles.footer} ${"container"}`}>
       <div className={footerStyles.footerContent}>
@@ -41,7 +59,9 @@ const Footer = () => {
             <li>+994 51 555 55 55</li>
         </ul>
         </div>
-        <div className={footerStyles.languageMobile}>
+        
+    </div>
+    <div className={footerStyles.languageMobile}>
     <img src="svg/globe-01.svg" alt="lang_icon" />
     <div className={footerStyles.switch}>
     <span>AZERBAIJANi</span>
@@ -49,8 +69,7 @@ const Footer = () => {
     <span>ENGLISH</span>
     </div>
   </div>
-    </div>
-    <div className={footerStyles.arrowUp}>
+    <div className={footerStyles.arrowUp} onClick={scrollToTop} style={{ cursor: "pointer" }}>
       <img src="svg/Vector_4.svg" alt="arrow_up" />
     </div>
 </div>
@@ -62,7 +81,7 @@ const Footer = () => {
   <div className={footerStyles.bottomInfo}>
     <span>Copyright © 2024 Wemark</span>
     <Link href="#">Terms & Privacy</Link>
-    <button className={footerStyles.button}>BACK TO TOP <img src="svg/Vector_4.svg" alt="arrow_up" /></button>
+    <button className={footerStyles.button} onClick={scrollToTop}>BACK TO TOP <img src="svg/Vector_4.svg" alt="arrow_up" /></button>
   </div>
 
   <div className={footerStyles.languageDesktop}>

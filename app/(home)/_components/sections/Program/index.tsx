@@ -11,7 +11,7 @@ const ProgramSection = ({ data }: ProgramSectionProps) => {
 
     return (
         <div className={ProgramStyles.programSection}>
-            <h1 className={ProgramStyles.programTitle}>{program.title}</h1>
+            <span className={ProgramStyles.programTitle}>{program.title}</span>
             <div className={ProgramStyles.programDescription}>
                 {parse(program.description)}
             </div>

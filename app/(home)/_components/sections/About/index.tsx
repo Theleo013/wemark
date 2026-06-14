@@ -13,7 +13,7 @@ const AboutSection = ({ data }: AboutSectionProps) => {
     <>
     <div className={AboutStyles.aboutSection}>
       <div className={AboutStyles.aboutHeader}>
-        <h2>{data.about_title}</h2>
+        <span>{data.about_title}</span>
         <div className={AboutStyles.link}>
           <Link href="#">Go to xSchool</Link>
         </div>

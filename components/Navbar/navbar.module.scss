@@ -5,7 +5,7 @@
 
 .navbar{
     padding: 42px 60px;
-    @include flex(row, space-between, start);
+    @include flex(row, space-between, center);
     @include mobile-xs{
             padding: 14px 20px;
 
@@ -15,6 +15,9 @@
 
     }
     .logo{
+      display: flex;
+      align-items: center;
+      
       img{
         width: 122px;
       height: 20px;

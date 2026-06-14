@@ -14,6 +14,7 @@ const MarqueeSection = ({ data }: MarqueSectionProps) => {
   return (
     
       <div className={MarqueeStyles.marqueeSection}>
+         <div className={MarqueeStyles.marqueeRow}>
       <Marquee speed={40} autoFill pauseOnHover>
         {items.map((item, index) => (
           <div className={MarqueeStyles.Wrapper} key={index}>
@@ -21,12 +22,13 @@ const MarqueeSection = ({ data }: MarqueSectionProps) => {
               {item}
             </span>
             <span className={MarqueeStyles.star}>
-              ✶
+              *
             </span>
           </div>
         ))}
       </Marquee>
-
+      </div>
+       <div className={MarqueeStyles.marqueeRow}>
       <Marquee speed={40} autoFill pauseOnHover direction="right">
         {items.map((item, index) => (
           <div className={MarqueeStyles.Wrapper} key={index}>
@@ -34,11 +36,12 @@ const MarqueeSection = ({ data }: MarqueSectionProps) => {
               {item}
             </span>
             <span className={MarqueeStyles.star}>
-              ✶
+              *
             </span>
           </div>
         ))}
       </Marquee>
+      </div>
     </div>
     
   )

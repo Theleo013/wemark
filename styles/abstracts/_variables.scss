@@ -17,6 +17,8 @@ $container-padding: 3.75rem; // 60px
 
 $primary-gray: rgba(224, 224, 224, 1);
 $primary-black: rgba(20, 20, 26, 1);
+$secondary-black:rgba(20, 20, 20, 1);
+$border-black:rgba(16, 16, 21, 0.5);
 
 
 /* ========================================
@@ -84,3 +86,11 @@ $z-toast: 1050;
 $transition-fast: 0.2s ease;
 $transition-normal: 0.3s ease;
 $transition-slow: 0.5s ease;
+
+/* ========================================
+   Line Height
+======================================== */
+$lh-sm: 36px;
+$lh-md: 44px;
+$lh-lg: 62px;
+$lh-xl: 100px;

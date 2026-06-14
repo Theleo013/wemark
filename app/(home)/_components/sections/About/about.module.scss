@@ -3,36 +3,56 @@
 @use "@/styles/abstracts/mixins" as *;
 
 .aboutSection{
-    padding: 42px $container-padding;
+    padding: 150px 60px 80px;
     @include mobile-xs{
-                padding: 42px 20px;
+                padding: 60px 20px;
             }
     .aboutHeader{
-        @include flex(row, space-between, flex-end);
-        margin-bottom: 40px;
-        h2{
+        padding-bottom: 80px;
+         @include mobile-xs{
+                padding-bottom: 40px;
+            }
+         @include desktop{
+                padding-bottom: 40px;
+            }
+        @include flex(row, space-between, end);
+        span{
             font-family: TT_Firs_Neue_Medium;
             font-size: 90px;
             color: $primary-black;
-            white-space: pre-line;
+            text-transform: uppercase;
+            line-height: $lh-xl;
+            
             @include mobile-xs{
-                font-size: $fs-md;
+                font-size: $fs-2xl;
+                line-height: $lh-lg;
             }
+             @include desktop {
+            font-size: $fs-2xl;
+            line-height: $lh-lg;
+        }
 
         }
         
         .link{
-    padding-bottom: 30px;
+    padding-bottom: 32px;
     a{
             font-family: TT_Hoves_Medium;
             font-size: $fs-2xl;
-            padding-bottom: 5px;
+            padding-bottom: 10px;
             color: $primary-black;
-            border-bottom: 2px solid $primary-black;
+            border-bottom: 1px solid $primary-black;
             @include mobile-xs{
                 display: none;
             }
+             @include desktop {
+            font-size: $fs-xl;
+            padding-bottom: 4px;
+        }
 
+        }
+        @include desktop {
+            padding-bottom: 24px;
         }
 }
         
@@ -40,14 +60,17 @@
     .aboutDescription{
                     font-family: TT_Hoves_Regular;
                     font-size: 30px;
-                    color: $primary-black;
+                    color: $secondary-black;
                     white-space: pre-line;
+                    line-height: $lh-md;
                     @include mobile-xs{
                 font-size: 20px;
+                line-height: 28px;
             }
+            @include desktop {
+            font-size: $fs-xl;
+            line-height: $lh-sm;
+        }
 
-    }
-    .aboutSlider{
-        margin: 50px 0;
     }
 }

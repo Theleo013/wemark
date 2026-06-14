@@ -12,7 +12,7 @@ const FounderSection = ({ data }: FounderSectionProps) => {
         <div className={FounderStyles.founderSection}>
             <div className={FounderStyles.mainContent}>
                 <div className={FounderStyles.imageContainer}>
-                    <h1 className={FounderStyles.founderTitle}>FOUNDER</h1>
+                    <span className={FounderStyles.founderTitle}>FOUNDER</span>
                     <img src={founder.image} alt="founder" />
                     <div className={FounderStyles.imageText}>
                         <span>{founder.name}</span>

@@ -3,51 +3,51 @@
 @use "@/styles/abstracts/mixins" as *;
 
 .founderSection {
-    margin-top: 250px;
-    padding: 100px 60px;
+    
+    padding: 472px 60px 260px;
 
     @include mobile-xs {
-            margin-top: 80px;
-        padding: 50px 20px;
+            
+        padding: 156px 20px 60px;
     }
 
     @include desktop {
-        margin-top: 80px;
-        padding: 50px 20px;
+       padding: 156px 20px 60px;
     }
 
     .mainContent {
         @include flex(row, space-between, start);
 
         @include mobile-xs {
-            @include flex(column, center, center, 40px);
+            @include flex(column, center, center, 60px);
         }
 
         @include desktop {
-            @include flex(column, center, center, 40px);
+            @include flex(column, center, center, 60px);
         }
 
         .imageContainer {
+
             position: relative; 
-            @include mobile-xs {
-                padding-top: 40px;
-            }
-            @include desktop {
-                padding-top: 40px;
-            }
 
             .founderTitle {
                 position: absolute;
-                top: -200;
+                top: -200px;
                 left: 0;
                 font-family: TT_Firs_Neue_Medium;
                 font-size: 90px;
                 color: $primary-black;
+                text-transform: uppercase;
+                line-height: $lh-xl;
                 margin: 0;
 
                 @include mobile-xs {
-                    top: -20;
+                    top: -100;
                     font-size: $fs-2xl;
+                }
+                @include desktop {
+                    top: -100;
+                    font-size: $fs-4xl;
                 }
             }
 
@@ -85,32 +85,45 @@
         }
 
         .textContainer {
-            padding: 0 25px;
+            padding: 0 0 0 115px;
             @include flex(column, start, start, 16px);
             color: $primary-black;
 
             @include mobile-xs {
                 padding: 0;
             }
+            @include desktop {
+                padding: 0;
+            }
 
             span {
-                padding: 0 80px 0 0;
+                padding: 0 100px 0 0;
                 font-family: TT_Hoves_Medium;
                 font-size: 36px;
                 text-transform: uppercase;
 
                 @include mobile-xs {
+                    padding: 0 50px 40px 0;
                     font-size: 20px;
                 }
+                 @include desktop {
+            font-size: $fs-2xl;;
+        }
             }
 
             p {
-                font-family: TT_Hoves_Medium;
+                font-family: TT_Hoves_Regular;
                 font-size: 30px;
+                line-height: $lh-md;
 
                 @include mobile-xs {
                     font-size: 20px;
+                    line-height: 28px;
                 }
+                 @include desktop {
+            font-size: $fs-xl;
+            line-height: $lh-sm;
+        }
             }
         }
     }

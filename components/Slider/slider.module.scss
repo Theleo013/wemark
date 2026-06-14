@@ -2,16 +2,29 @@
 @use "@/styles/abstracts/variables" as *;
 @use "@/styles/abstracts/mixins" as *;
 
+.slide {
+  width: auto !important;       
+  margin-right: 47.65px;       
 
-.slider{
-    position: relative;
-    width: 100%;
-    height: 486px;
-    @include mobile-xs{
-                height: 251px;
-            }
-    .images{
-        object-fit: cover;
-    }
+  @include mobile-xs {
+    margin-right: 16px;
+  }
+}
 
+.slider {
+  position: relative;
+  width: 865px;
+  height: 486px;
+
+  @include mobile-xs {
+    width: 446px;
+    height: 251px;
+  }
+}
+
+.images {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }

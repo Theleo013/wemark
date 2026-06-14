@@ -3,20 +3,24 @@
 @use "@/styles/abstracts/mixins" as *;
 
 .faqSection {
-    padding: 40px 60px;
+    padding: 260px 60px 200px;
     @include mobile-xs{
+                display: none;
+            }
+            @include desktop{
                 padding: 40px 20px;
             }
     
 
-    h1 {
+    span {
         font-family: TT_Firs_Neue_Medium ;
-        font-size: $fs-5xl;
+        font-size: 90px;
         text-transform: uppercase;
-        margin-bottom: 40px;
+        line-height: $lh-xl;
         white-space: pre-line;
-        @include mobile-xs{
-                font-size: $fs-2xl;
+        @include desktop{
+                font-size: $fs-3xl;
+                line-height: $lh-md;
             }
     }
 }
@@ -24,14 +28,15 @@
 .faqList {
     display: flex;
     flex-direction: column;
+    padding: 100px 0 0;
 }
 
 .faqItem {
-    border-top: 1px solid #ccc;
+    border-top: 1px solid $border-black;
     padding: 20px 0;
 
     &:last-child {
-        border-bottom: 1px solid #ccc;
+        border-bottom: 1px solid $border-black;
     }
 }
 
@@ -41,22 +46,33 @@
     align-items: center;
     cursor: pointer;
 
-    h3 {
-        font-size: 16px;
-        font-weight: 400;
+    span {
+        font-family: TT_Hoves_Regular;
+        font-size: 30px;
+        line-height: $lh-md;
+        color: $primary-black;
+        @include desktop{
+                font-size: $fs-2xl;
+                line-height: $lh-sm;
+            }
     }
 
-    .icon {
-        font-size: $fs-2xl;
-        font-weight: 300;
-        color: $primary-black;
-        user-select: none;
+    .icons {
+    @include desktop{
+                width: 24px;
+                height: 24px;
+            } 
     }
 }
 
 .faqAnswer {
+    font-family: TT_Hoves_Regular;
     margin-top: 16px;
-    font-size: $fs-sm;
-    color: #555;
-    line-height: 1.6;
+    font-size: 30px;
+    color: $border-black;
+    line-height: $lh-md;
+    @include desktop{
+                font-size: $fs-xl;
+                line-height: $lh-sm;
+            }
 }
