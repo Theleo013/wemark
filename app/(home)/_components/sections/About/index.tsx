@@ -9,6 +9,7 @@ interface AboutSectionProps {
 }
 
 const AboutSection = ({ data }: AboutSectionProps) => {
+  
   return (
     <>
     <div className={AboutStyles.aboutSection}>

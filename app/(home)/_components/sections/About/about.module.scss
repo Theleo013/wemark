@@ -21,11 +21,12 @@
             font-size: 90px;
             color: $primary-black;
             text-transform: uppercase;
+            white-space: pre-line;
             line-height: $lh-xl;
             
             @include mobile-xs{
                 font-size: $fs-2xl;
-                line-height: $lh-lg;
+                line-height: 1.2;
             }
              @include desktop {
             font-size: $fs-2xl;
