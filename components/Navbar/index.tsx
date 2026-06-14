@@ -6,12 +6,12 @@ import Link from "next/link"
 const Navbar = () => {
 
   const NavbarItems: {label: string; href: string}[] =[
-    {label: "About", href: "/about"},
-    {label: "Services", href: "/services"},
-    {label: "Case Studies", href: "/case-studies"},
-    {label: "Career", href: "/career"},
-    {label: "Blog", href: "/blog"},
-    {label: "Xschool", href: "/xschool"},
+    {label: "About", href: "#"},
+    {label: "Services", href: "#"},
+    {label: "Case Studies", href: "#"},
+    {label: "Career", href: "#"},
+    {label: "Blog", href: "#"},
+    {label: "Xschool", href: "#"},
   ]
 
   return (
@@ -27,7 +27,7 @@ const Navbar = () => {
             ))}
         </div>
         <div className={NavbarStyles.contact}>
-            <Link href="/contact">Let's Talk</Link>
+            <Link href="#">Let's Talk</Link>
         </div>
         <div className={NavbarStyles.menuLabel}>
         <span >Menu</span>
