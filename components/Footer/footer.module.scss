@@ -2,7 +2,9 @@
 @use "@/styles/abstracts/variables" as *;
 @use "@/styles/abstracts/mixins" as *;
 
-.footer {
+.footer{
+    background-color: $primary-black;
+    .footerContainer {
     padding: 70px 60px 37px;
 
     @include mobile-xs {
@@ -224,4 +226,5 @@ margin-top: 50px;
             }
         }
     }
+}
 }

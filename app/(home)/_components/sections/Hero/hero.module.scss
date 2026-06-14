@@ -35,18 +35,32 @@
         }
     }
 
-    .heroTitleLine {
-        font-family: TT_Hoves_Regular;
-        font-size: 116px;
-        color: $primary-gray;
-        text-transform: uppercase;
-        line-height: 1.1;
-        display: block;
-         font-size: clamp(28px, 8vw, 116px);
+    .heroTitleWrapper {
+    font-family: TT_Hoves_Regular;
+    font-size: 116px;
+    color: $primary-gray;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    @include mobile-xs{
+        font-size: 36px;
     }
+    @include desktop{
+        font-size: 68px;
+    }
+}
 
-    .line0 { padding-left: 0px; }
-.line1 { padding-left: clamp(60px, 15vw, 260px); }
-.line2 { padding-left: clamp(120px, 30vw, 520px); }
+.line0 { margin-left: 0; }
+.line1 { margin-left: clamp(60px, 8vw, 160px); }
+.line2 { margin-left: clamp(120px, 16vw, 320px); }
 
 }
+
+// font-family: TT_Hoves_Regular;
+//         font-size: 116px;
+//         color: $primary-gray;
+//         text-transform: uppercase;

@@ -10,13 +10,15 @@ export default async function Home() {
     const data: XschoolData = await getXschool();
 
   return (
-   <div className="container">
+   <div >
     <HeroSection data={data}/>
+    <div className="container">
     <AboutSection data={data}/> 
     <FounderSection data={data}/>
     <ProgramSection data={data}/> 
     <MarqueeSection data={data}/>
-    <FAQSection data={data}/>   
+    <FAQSection data={data}/> 
+    </div>  
    </div>
   );
 }

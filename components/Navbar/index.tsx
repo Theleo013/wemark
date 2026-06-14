@@ -15,7 +15,7 @@ const Navbar = () => {
   ]
 
   return (
-    <div className={NavbarStyles.navbar}>
+    <div className={`${NavbarStyles.navbar} ${"container"}`}>
         <div className={NavbarStyles.logo}>
             <img src="svg/wemark_header_logo.svg" alt="wemark logo"/>
         </div>

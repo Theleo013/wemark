@@ -22,7 +22,8 @@ const Footer = () => {
   }
 
   return (
-    <div className={`${footerStyles.footer} ${"container"}`}>
+    <div className={footerStyles.footer}>
+    <div className={`${footerStyles.footerContainer} ${"container"}`}>
       <div className={footerStyles.footerContent}>
     <div className={footerStyles.footerColumn}>
         <span>Sitemap</span>
@@ -89,6 +90,7 @@ const Footer = () => {
     Azərbaycan dili
   </div>
 </div>
+    </div>
     </div>
   )
 }
