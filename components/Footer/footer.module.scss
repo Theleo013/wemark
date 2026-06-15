@@ -155,6 +155,9 @@ margin-top: 50px;
         border-top: 1px solid $primary-gray;
         opacity: 50%;
         margin: 53px 0;
+        @include mobile-xs{
+            margin: 20px 0 38px;
+        }
     }
 
     .footerLogo {
