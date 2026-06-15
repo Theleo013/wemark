@@ -64,9 +64,11 @@
                 white-space: nowrap;
 
                 @include mobile-xs {
+                    line-height: $lh-xs;
                     font-size: 20px;
                 }
                 @include desktop {
+                    line-height: $lh-xs;
                     font-size: 20px;
                 }
             }
@@ -82,9 +84,11 @@
 
                     @include mobile-xs {
                         font-size: 16px;
+                        line-height: 32px;
                     }
                     @include desktop {
                         font-size: 16px;
+                        line-height: 32px;
                     }
                 }
             }
@@ -104,6 +108,11 @@
 margin-top: 50px;
             @include mobile-xs {
                 @include flex(row, center, center, 10px);
+                font-size: $fs-sm;
+                line-height: 24px;
+                img{width: 22px;
+                height: 22px;}
+                
              
             }
             @include desktop {
@@ -113,8 +122,8 @@ margin-top: 50px;
            .switch{
                 @include flex(row, center, center, 10px);
                 .divide{
-                   border-left: 2px solid $primary-gray;
-                   height: 26px;
+                   border-left: 1px solid $primary-gray;
+                   height: 24px;
                 }
             }
             
@@ -136,7 +145,7 @@ margin-top: 50px;
     }
 
     .divider {
-        border-top: 2px solid $primary-gray;
+        border-top: 1px solid $primary-gray;
         opacity: 50%;
         margin: 53px 0;
     }

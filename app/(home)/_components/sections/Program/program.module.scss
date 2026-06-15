@@ -6,7 +6,7 @@
     padding: 0 60px 260px;
 
     @include mobile-xs {
-        padding: 0 20px;
+        padding: 0 20px 60px;
     }
 
     .programTitle {
@@ -27,6 +27,12 @@
 
     .programDescription {
         padding-top: 80px;
+        @include mobile-xs{
+            padding-top: 40px;
+        }
+        @include desktop{
+            padding-top: 40px;
+        }
         
 
         p {
@@ -49,12 +55,13 @@
             font-family: TT_Hoves_Medium;
             font-size: 36px;
             color: $primary-black;
-            line-height: $lh-lg;
+            line-height: $lh-xs;
             text-transform: uppercase;
 
             @include mobile-xs {
-                font-size: $fs-2xl;
-                font-weight: 400;
+                font-size: inherit;
+                line-height: inherit;
+                
             }
              @include desktop {
             font-size: $fs-2xl;
@@ -65,7 +72,7 @@
 
         ul {
             list-style: disc;
-            padding-left: 4rem;
+            padding-left: 3rem;
 
             @include mobile-xs {
                 padding-left: 2rem;

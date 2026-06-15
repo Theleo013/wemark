@@ -3,13 +3,12 @@
 @use "@/styles/abstracts/mixins" as *;
 
 .marqueeSection {
-    margin: 41px 0;
     border-top: 1px solid rgba(16, 16, 21, 0.5);
     border-bottom: 1px solid rgba(16, 16, 21, 0.5);
     
 
     .marqueeRow {
-        padding: 1rem 0;
+        padding: 40px 0 43px 0;
         
         &:first-child {
             border-bottom: 1px solid $primary-black;
@@ -22,6 +21,8 @@
         .item {
             font-family: TT_Hoves_Medium;
             font-size: 60px;
+            line-height: 76px;
+            color: $primary-black;
             text-transform: uppercase;
             @include mobile-xs{
                 font-size: $fs-4xl;
