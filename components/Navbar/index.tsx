@@ -1,10 +1,12 @@
+'use client'
+import { useState } from "react"
 import NavbarStyles from "./navbar.module.scss"
-import Image from "next/image"
 import Link from "next/link"
+import BurgerMenu from "../BurgerMenu"
 
 
 const Navbar = () => {
-
+ const [menuOpen, setMenuOpen] = useState(false)
   const NavbarItems: {label: string; href: string}[] =[
     {label: "About", href: "#"},
     {label: "Services", href: "#"},
@@ -30,10 +32,11 @@ const Navbar = () => {
             <Link href="#">Let's Talk</Link>
         </div>
         <div className={NavbarStyles.menuLabel}>
-        <span >Menu</span>
+        <BurgerMenu/>
         </div>
     </div>
   )
 }
 
 export default Navbar
+
